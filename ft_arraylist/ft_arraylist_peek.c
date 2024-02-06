@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_arraylist_peek.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 17:01:30 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 09:27:15 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 10:54:27 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 10:54:47 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_arraylist_internal.h"
 
-# include <stdlib.h>
+/*
+  Look at last element of alst without removing it.
+  If alst is empty returns NULL.
+  The alst will consider still being owner of returned
+  value and thus you should not destroy it directly.
+*/
+void	*ft_arraylist_peek(t_arraylist alst)
+{
+	if (alst->size == 0)
+		return (NULL);
+	return (ft_arraylist_get(alst, alst->size - 1));
+}
 
-# include "ft_ctype.h"
-# include "ft_stdio.h"
-# include "ft_memlib.h"
-# include "ft_string.h"
-# include "collection/ft_list.h"
-
-#endif

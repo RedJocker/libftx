@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 18:58:47 by maurodri          #+#    #+#             */
-/*   Updated: 2024/01/10 19:38:27 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:05:04 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,6 @@ int	pointer_size_outstr(int xlen, t_format *fmt)
 			outstr_len = xlen;
 	}
 	return (outstr_len);
-}
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *) dst)[i] = ((char *) src)[i];
-		i++;
-	}
-	return (dst);
 }
 
 void	fill_string(char *str, char filler, unsigned int size)

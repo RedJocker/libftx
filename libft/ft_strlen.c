@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 17:32:48 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/14 17:40:00 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:41:46 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 size_t	ft_strlen(const char *str)
 {

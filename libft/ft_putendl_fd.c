@@ -6,11 +6,12 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:11:06 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/19 17:14:49 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:29:54 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stdio.h"
+#include "ft_string.h"
 
 void	ft_putendl_fd(char *str, int fd)
 {

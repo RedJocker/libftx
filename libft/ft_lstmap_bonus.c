@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:03:44 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/31 20:48:22 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:49:05 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "collection/ft_list.h"
 
 static void	new_node(
 	t_list **node_ptr, void **content, t_list *lst, void *(*fun)(void *))

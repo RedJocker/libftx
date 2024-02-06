@@ -6,25 +6,15 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:47:46 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/17 13:03:59 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 08:14:15 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static int	is_space(char ch)
-{
-	return (ch == ' '
-		|| ch == '\n'
-		|| ch == '\t'
-		|| ch == '\r'
-		|| ch == '\f'
-		|| ch == '\v');
-}
+#include "ft_ctype.h"
 
 static void	parse_spaces(const char **str)
 {
-	while (is_space(**str))
+	while (ft_isspace(**str))
 		(*str)++;
 }
 

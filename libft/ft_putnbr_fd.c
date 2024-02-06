@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:30:43 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/23 16:45:34 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:30:25 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stdio.h"
 
 static void	helper(long long num, int fd)
 {

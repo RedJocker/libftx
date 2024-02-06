@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:44:59 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/17 11:51:50 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:23:52 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memlib.h"
 
 void	*ft_memchr(const void *block, int byte, size_t n)
 {

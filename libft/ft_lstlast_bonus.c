@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:03:43 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/24 15:03:43 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:48:03 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "collection/ft_list.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

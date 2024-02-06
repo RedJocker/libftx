@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_arraylist_len.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
+/*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:03:12 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 09:48:23 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 10:36:58 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 10:38:08 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "collection/ft_list.h"
+#include "ft_arraylist_internal.h"
 
-void	ft_lstdelone(t_list *node, void (*del_content)(void*))
+/*
+  Returns the current size of alst
+*/
+size_t	ft_arraylist_len(t_arraylist alst)
 {
-	if (!node || !del_content)
-		return ;
-	if (node->content)
-		del_content(node->content);
-	free(node);
+	return (alst->size);
 }

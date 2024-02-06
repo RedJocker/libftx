@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_arraylist_get.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 18:20:34 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 09:02:22 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 10:38:55 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 10:39:11 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_memlib.h"
+#include "ft_arraylist_internal.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+/*
+	Returns the element of alst with index at
+	if at is within the bounds.
+	If at is out of bounds returns NULL.
+	Do not call free on returned value,
+	instead treat it as a borrowed value since
+	alst will keep its ownership.
+	If you need ownership of value make a clone.
+*/
+void	*ft_arraylist_get(t_arraylist alst, size_t at)
 {
-	size_t	i;
-
-	if (dst == NULL && src == NULL)
+	if (at >= alst->size)
 		return (NULL);
-	i = 0;
-	while (i < n)
-	{
-		((char *) dst)[i] = ((char *) src)[i];
-		i++;
-	}
-	return (dst);
+	return (alst->arr[at]);
 }

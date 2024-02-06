@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 17:47:48 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/15 00:44:31 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:03:09 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memlib.h"
 
 void	*ft_memset(void *buffer, int ch, size_t len)
 {

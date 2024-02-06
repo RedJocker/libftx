@@ -6,21 +6,11 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:03:49 by maurodri          #+#    #+#             */
-/*   Updated: 2024/01/07 04:01:10 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:15:59 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "presenter_utils_bonus.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (*str++)
-		len++;
-	return (len);
-}
 
 int	base10_num_size(int nbr)
 {

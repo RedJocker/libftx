@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 17:01:30 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 09:27:15 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 07:51:19 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 09:21:19 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_CTYPE_H
+# define  FT_CTYPE_H
 
-# include <stdlib.h>
-
-# include "ft_ctype.h"
-# include "ft_stdio.h"
-# include "ft_memlib.h"
-# include "ft_string.h"
-# include "collection/ft_list.h"
+int		ft_isalpha(int ch);
+int		ft_isdigit(int ch);
+int		ft_isalnum(int ch);
+int		ft_isascii(int ch);
+int		ft_isprint(int ch);
+int		ft_isspace(int ch);
+int		ft_isupper(int ch);
+int		ft_islower(int ch);
 
 #endif

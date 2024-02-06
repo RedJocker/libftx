@@ -6,11 +6,11 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:02:59 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/24 15:03:01 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 09:48:40 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "collection/ft_list.h"
 
 void	ft_lstclear(t_list **lst, void (*del_content)(void*))
 {

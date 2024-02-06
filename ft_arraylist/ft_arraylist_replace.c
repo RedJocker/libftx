@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
+/*   ft_arraylist_replace.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
+/*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 16:11:00 by maurodri          #+#    #+#             */
-/*   Updated: 2023/11/27 16:18:24 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 10:51:15 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 10:52:10 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_BONUS_H
-# define FT_PRINTF_BONUS_H
+#include "ft_arraylist_internal.h"
 
-int	ft_printf(const char *str, ...);
-
-#endif
+void	ft_arraylist_replace(t_arraylist alst, void *element, size_t at)
+{
+	if (at >= alst->size)
+		return ;
+	alst->destroy_element(alst->arr[at]);
+	alst->arr[at] = element;
+}
