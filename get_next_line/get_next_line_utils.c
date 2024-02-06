@@ -6,12 +6,12 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 21:19:11 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 07:56:01 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 19:36:33 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <unistd.h>
+
 
 t_stringbuilder	stringbuilder_new(void)
 {
