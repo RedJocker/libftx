@@ -6,14 +6,14 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:05:44 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 09:43:43 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 20:55:16 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIST_H
 # define FT_LIST_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {

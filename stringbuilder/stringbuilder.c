@@ -6,11 +6,12 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:32:22 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 20:33:30 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 20:51:57 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stringbuilder.h"
+#include "stringbuilder_internals.h"
 
 t_stringbuilder	stringbuilder_new(void)
 {

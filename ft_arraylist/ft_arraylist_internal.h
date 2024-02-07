@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 18:01:30 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 19:35:52 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 20:57:36 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ struct s_arraylist {
 	void	**arr;
 	size_t	size;
 	size_t	capacity;
-	void 	(*destroy_element)(void *element);
+	void	(*destroy_element)(void *element);
 };
 
 #endif

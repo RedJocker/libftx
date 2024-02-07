@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:54:27 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 10:54:47 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 20:59:18 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ void	*ft_arraylist_peek(t_arraylist alst)
 		return (NULL);
 	return (ft_arraylist_get(alst, alst->size - 1));
 }
-

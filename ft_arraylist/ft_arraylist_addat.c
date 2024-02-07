@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:48:10 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 10:50:41 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 20:56:51 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@
   	Transfers the ownership of element to alst.
 	Do not call free on element since alst will consider
 	being the owner of element after element was added.
- */  
+ */
 t_arraylist	ft_arraylist_addat(t_arraylist alst, void *element, size_t at)
 {
 	void	*last;
 	size_t	i;
-	
+
 	if (at >= alst->size)
 		return (ft_arraylist_add(alst, element));
 	last = ft_arraylist_get(alst, alst->size - 1);

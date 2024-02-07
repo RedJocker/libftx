@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stringbuilder_internals.h                          :+:      :+:    :+:   */
+/*   stringbuilder.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 20:37:07 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 20:52:47 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 20:34:05 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 20:36:36 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRINGBUILDER_INTERNALS_H
-# define STRINGBUILDER_INTERNALS_H
+#ifndef STRINGBUILDER_H
+# define STRINGBUILDER_H
 
-# define DEFAULT_LINE_SIZE 90
+typedef struct s_stringbuilder	*t_stringbuilder;
 
-# include <stdlib.h>
-
-struct s_stringbuilder
-{
-	char			*str;
-	unsigned int	size;
-	unsigned int	capacity;
-};
+t_stringbuilder	stringbuilder_new(void);
+t_stringbuilder	stringbuilder_addchar(t_stringbuilder builder, char ch);
+char			*stringbuilder_build(t_stringbuilder builder);
+void			stringbuilder_destroy(t_stringbuilder builder);
+int				stringbuilder_isempty(t_stringbuilder builder);
 
 #endif

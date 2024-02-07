@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stringbuilder_internals.h                          :+:      :+:    :+:   */
+/*   get_next_line_internals.h                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 20:37:07 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 20:52:47 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/06 20:39:55 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/06 20:51:58 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRINGBUILDER_INTERNALS_H
-# define STRINGBUILDER_INTERNALS_H
-
-# define DEFAULT_LINE_SIZE 90
+#ifndef GET_NEXT_LINE_INTERNALS_H
+# define GET_NEXT_LINE_INTERNALS_H
 
 # include <stdlib.h>
+# include <unistd.h>
+# include "stringbuilder.h"
+# include "get_next_line.h"
 
-struct s_stringbuilder
+typedef struct s_buffer
 {
-	char			*str;
-	unsigned int	size;
-	unsigned int	capacity;
-};
+	ssize_t			char_read;
+	char			arr[BUFFER_SIZE];
+	ssize_t			i;
+	char			is_init;
+}	t_buffer;
 
 #endif

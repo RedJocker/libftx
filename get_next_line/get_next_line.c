@@ -6,12 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 21:17:35 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/05 22:52:55 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/06 20:45:50 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <unistd.h>
+#include "get_next_line_internals.h"
 
 static void	buffer_flush(t_buffer *b, t_stringbuilder *builder)
 {
