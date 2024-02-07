@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/02/06 11:09:48 by maurodri         ###   ########.fr        #
+#    Updated: 2024/02/07 20:11:39 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -34,6 +34,7 @@ FILES = ft_isalpha.c \
 		ft_strncmp.c \
 		ft_memchr.c \
 		ft_memcmp.c \
+		ft_realloc.c \
 		ft_strnstr.c \
 		ft_atoi.c \
 		ft_calloc.c \
@@ -75,7 +76,6 @@ FILES = ft_isalpha.c \
 		present_hexa_bonus.c \
 		present_pointer_bonus.c \
 		get_next_line.c \
-		get_next_line_utils.c \
 		ft_arraylist_add.c \
 		ft_arraylist_addat.c \
 		ft_arraylist_destroy.c \
@@ -86,14 +86,17 @@ FILES = ft_isalpha.c \
 		ft_arraylist_peek.c \
 		ft_arraylist_pop.c \
 		ft_arraylist_replace.c \
-		ft_arraylist_transform.c
+		ft_arraylist_transform.c \
+		stringbuilder.c
 
 VPATH = ./ft_printf \
 		./ft_printf/parser_bonus/ \
 		./ft_printf/presenter_bonus/ \
 		./libft \
 		./get_next_line \
-		./ft_arraylist
+		./ft_arraylist \
+		./stringbuilder
+
 INCLUDES := -I./includes -I./ft_printf -I./ft_printf/presenter_bonus -I./ft_printf/parser_bonus
 OBJS_DIR := ./obj/
 OBJS = $(addprefix $(OBJS_DIR), $(patsubst %.c,%.o,$(FILES)))
