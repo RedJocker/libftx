@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:55:17 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 10:55:40 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:27:55 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	ft_arraylist_foreach(t_arraylist alst, void (*fun) (void *))
 	while (i < alst->size)
 		fun(alst->arr[i++]);
 }
-

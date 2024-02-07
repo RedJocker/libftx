@@ -6,12 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:39:49 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 19:33:54 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:27:26 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_internal.h"
-
 
 /*
 	Adds element to the end of alst.
@@ -23,17 +22,17 @@
 	Transfers the ownership of element to alst.
 	Do not call free on element since alst will consider
 	being the owner of element after element was added.
-*/  
+*/
 t_arraylist	ft_arraylist_add(t_arraylist alst, void *element)
 {
 	void	**temp;
 
-	if(alst->capacity == alst->size)
+	if (alst->capacity == alst->size)
 	{
 		temp = (void *) ft_realloc(
-			alst->arr,
-			alst->capacity * sizeof(void *),
-			2 * alst->capacity * sizeof(void *));
+				alst->arr,
+				alst->capacity * sizeof(void *),
+				2 * alst->capacity * sizeof(void *));
 		if (!temp)
 			return (ft_arraylist_destroy(alst));
 		alst->arr = temp;
@@ -42,4 +41,3 @@ t_arraylist	ft_arraylist_add(t_arraylist alst, void *element)
 	alst->size++;
 	return (alst);
 }
-

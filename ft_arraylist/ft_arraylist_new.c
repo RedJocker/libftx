@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:34:21 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 10:36:33 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:23:49 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 	that wiil be used when
 	destroying t_arraylist 
  */
-t_arraylist ft_arraylist_new(void (*destroy_element)(void *element))
+t_arraylist	ft_arraylist_new(void (*destroy_element)(void *element))
 {
-	t_arraylist new_arraylist;
+	t_arraylist	new_arraylist;
 
 	if (!destroy_element)
 		return (NULL);
@@ -30,7 +30,7 @@ t_arraylist ft_arraylist_new(void (*destroy_element)(void *element))
 		return (NULL);
 	new_arraylist->arr = malloc(DEFAULT_ARRAYLIST_SIZE * sizeof(void *));
 	if (!new_arraylist->arr)
-		return ft_free_retnull(new_arraylist);
+		return (ft_free_retnull(new_arraylist));
 	new_arraylist->capacity = DEFAULT_ARRAYLIST_SIZE;
 	new_arraylist->size = 0;
 	new_arraylist->destroy_element = destroy_element;
