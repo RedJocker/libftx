@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:39:49 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/07 20:27:26 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/09 13:02:13 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ t_arraylist	ft_arraylist_add(t_arraylist alst, void *element)
 				alst->capacity * sizeof(void *),
 				2 * alst->capacity * sizeof(void *));
 		if (!temp)
-			return (ft_arraylist_destroy(alst));
+		{
+			ft_arraylist_destroy(alst);
+			return (NULL);
+		}
 		alst->arr = temp;
 	}
 	alst->arr[alst->size] = element;

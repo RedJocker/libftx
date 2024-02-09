@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:52:00 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 20:54:50 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/09 13:04:23 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 typedef struct s_arraylist	*t_arraylist;
 
 t_arraylist	ft_arraylist_new(void (*destroy_element)(void *element));
-void		*ft_arraylist_destroy(t_arraylist alst);
+void		ft_arraylist_destroy(t_arraylist alst);
 size_t		ft_arraylist_len(t_arraylist alst);
 void		*ft_arraylist_get(t_arraylist alst, size_t at);
 t_arraylist	ft_arraylist_add(t_arraylist alst, void *element);
@@ -30,5 +30,13 @@ int			ft_arraylist_transform(
 				t_arraylist alst,
 				void *(*fun)(void *),
 				void (*update_destroy_element)(void *element));
-
+int 		ft_arraylist_transform2di(
+				t_arraylist alst,
+				void *(*fun)(size_t i, size_t j,void *element),
+				void (*update_destroy_element)(void *element));
+int			ft_arraylist_transform2diarg(
+				t_arraylist alst,
+				void *(*fun)(size_t i, size_t j, void *element, void *arg),
+				void *arg,
+				void (*update_destroy_element)(void *element));
 #endif

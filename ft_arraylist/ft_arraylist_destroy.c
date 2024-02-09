@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:35:24 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 10:38:21 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/09 13:02:45 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 	It is not recomended to call free
 	directly on alst prefer using this function instead.
  */
-void	*ft_arraylist_destroy(t_arraylist alst)
+void	ft_arraylist_destroy(t_arraylist alst)
 {
 	size_t	i;
 
@@ -33,5 +33,4 @@ void	*ft_arraylist_destroy(t_arraylist alst)
 	}
 	free(alst->arr);
 	free(alst);
-	return (NULL);
 }

@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/02/09 05:25:40 by maurodri         ###   ########.fr        #
+#    Updated: 2024/02/09 13:01:26 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,7 +37,6 @@ FILES = ft_isalpha.c \
 		ft_realloc.c \
 		ft_strnstr.c \
 		ft_atoi.c \
-		ft_nop.c \
 		ft_calloc.c \
 		ft_strdup.c \
 		ft_substr.c \
@@ -45,6 +44,7 @@ FILES = ft_isalpha.c \
 		ft_strtrim.c \
 		ft_split.c \
 		ft_itoa.c \
+		ft_nop.c \
 		ft_strmapi.c \
 		ft_striteri.c \
 		ft_putchar_fd.c \
@@ -88,6 +88,8 @@ FILES = ft_isalpha.c \
 		ft_arraylist_pop.c \
 		ft_arraylist_replace.c \
 		ft_arraylist_transform.c \
+		ft_arraylist_transform2di.c \
+		ft_arraylist_transform2diarg.c \
 		stringbuilder.c
 
 VPATH = ./ft_printf \
@@ -103,7 +105,7 @@ OBJS_DIR := ./obj/
 OBJS = $(addprefix $(OBJS_DIR), $(patsubst %.c,%.o,$(FILES)))
 DEP_FLAGS := -MP -MD
 DEP_FILES := $(addsuffix .d,$(OBJS))
-CFLAGS := -fsanitize=address -fsanitize=undefined -Wall -Wextra -Werror
+CFLAGS := -fsanitize=address -fsanitize=undefined -g3 -Wall -Wextra -Werror
 CC := cc
 
 all: $(NAME)
