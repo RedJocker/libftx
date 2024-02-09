@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/02/07 20:11:39 by maurodri         ###   ########.fr        #
+#    Updated: 2024/02/09 05:25:40 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,6 +37,7 @@ FILES = ft_isalpha.c \
 		ft_realloc.c \
 		ft_strnstr.c \
 		ft_atoi.c \
+		ft_nop.c \
 		ft_calloc.c \
 		ft_strdup.c \
 		ft_substr.c \
