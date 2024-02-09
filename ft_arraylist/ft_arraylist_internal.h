@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 18:01:30 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 20:57:36 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/09 05:21:41 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 
 # define DEFAULT_ARRAYLIST_SIZE 5
 
-struct s_arraylist {
+struct s_arraylist
+{
 	void	**arr;
 	size_t	size;
 	size_t	capacity;
