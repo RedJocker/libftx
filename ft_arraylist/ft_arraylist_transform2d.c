@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arraylist_transform2di.c                        :+:      :+:    :+:   */
+/*   ft_arraylist_transform2d.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 09:42:32 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/11 07:59:15 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/11 19:24:51 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/18 17:39:02 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 static int	update_list(
 	t_arraylist ilst,
-	size_t i,
-	void *(*fun)(size_t i, size_t j, void *element))
+	void *(*fun)(void *element))
 {
 	size_t	j;
 	void	*temp;
@@ -25,7 +24,7 @@ static int	update_list(
 	j = 0;
 	while (j < ilst->size)
 	{
-		temp = fun(i, j, ilst->arr[j]);
+		temp = fun(ilst->arr[j]);
 		if (temp == NULL)
 			num_nulls_returned++;
 		ilst->destroy_element(ilst->arr[j]);
@@ -37,7 +36,7 @@ static int	update_list(
 
 /*
     Assumes alst is a matrix, that is, a list of list.
-    Call fun with each element of matrix and its indexes,
+    Call fun with each element of matrix,
     frees the old element and replaces with the return value of fun.
     The fun should not be null.
     If fun return type is the same as
@@ -49,9 +48,9 @@ static int	update_list(
     of times fun returns NULL, and thus
     will return 0 if fun has never returned NULL.
  */
-int	ft_arraylist_transform2di(
+int	ft_arraylist_transform2d(
 	t_arraylist alst,
-	void *(*fun)(size_t i, size_t j, void *element),
+	void *(*fun)(void *element),
 	void (*update_destroy_element)(void *element))
 {
 	size_t		i;
@@ -63,7 +62,7 @@ int	ft_arraylist_transform2di(
 	while (i < alst->size)
 	{
 		ilst = alst->arr[i];
-		num_nulls_returned += update_list(ilst, i, fun);
+		num_nulls_returned += update_list(ilst, fun);
 		if (update_destroy_element != NULL)
 			ilst->destroy_element = update_destroy_element;
 		i++;

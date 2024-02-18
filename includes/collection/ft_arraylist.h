@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:52:00 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/09 13:04:23 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/18 17:40:46 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,17 @@ int			ft_arraylist_transform(
 				t_arraylist alst,
 				void *(*fun)(void *),
 				void (*update_destroy_element)(void *element));
-int 		ft_arraylist_transform2di(
+int			ft_arraylist_transform2di(
 				t_arraylist alst,
-				void *(*fun)(size_t i, size_t j,void *element),
+				void *(*fun)(size_t i, size_t j, void *element),
 				void (*update_destroy_element)(void *element));
 int			ft_arraylist_transform2diarg(
 				t_arraylist alst,
 				void *(*fun)(size_t i, size_t j, void *element, void *arg),
 				void *arg,
+				void (*update_destroy_element)(void *element));
+int			ft_arraylist_transform2d(
+				t_arraylist alst,
+				void *(*fun)(void *element),
 				void (*update_destroy_element)(void *element));
 #endif

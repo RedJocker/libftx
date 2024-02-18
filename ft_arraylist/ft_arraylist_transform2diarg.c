@@ -6,21 +6,21 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 10:59:34 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/09 11:02:22 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/02/11 07:58:26 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_internal.h"
 
-static int update_list(
+static int	update_list(
 	t_arraylist ilst,
 	size_t i,
 	void *arg,
-    void *(*fun)(size_t i, size_t j, void *element, void *arg))
+	void *(*fun)(size_t i, size_t j, void *element, void *arg))
 {
 	size_t	j;
 	void	*temp;
-	int      num_nulls_returned;
+	int		num_nulls_returned;
 
 	num_nulls_returned = 0;
 	j = 0;
