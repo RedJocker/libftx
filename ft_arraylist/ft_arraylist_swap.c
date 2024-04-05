@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_arraylist_swap.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 21:19:28 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/11 17:49:46 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/18 18:34:39 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/18 18:44:53 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "ft_arraylist_internal.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 50
-# endif
+void	ft_arraylist_swap(t_arraylist alst, size_t at1, size_t at2)
+{
+	void	*temp;
 
-# ifndef FD_SIZE
-#  define FD_SIZE 100
-# endif
-
-char			*get_next_line(int fd);
-
-#endif
+	if (at1 >= alst->size || at2 >= alst->size)
+		return ;
+	temp = alst->arr[at1];
+	alst->arr[at1] = alst->arr[at2];
+	alst->arr[at2] = temp;
+}

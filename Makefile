@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/02/09 13:01:26 by maurodri         ###   ########.fr        #
+#    Updated: 2024/04/02 18:51:21 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -42,6 +42,7 @@ FILES = ft_isalpha.c \
 		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_chomp.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_nop.c \
@@ -81,13 +82,22 @@ FILES = ft_isalpha.c \
 		ft_arraylist_addat.c \
 		ft_arraylist_destroy.c \
 		ft_arraylist_foreach.c \
+		ft_arraylist_foreacharg.c \
+		ft_arraylist_foreach2d.c \
+		ft_arraylist_foreach2darg.c \
+		ft_arraylist_swap.c \
+		ft_arraylist_swap2d.c \
+		ft_arraylist_switch.c \
+		ft_arraylist_switch2d.c \
 		ft_arraylist_get.c \
 		ft_arraylist_len.c \
 		ft_arraylist_new.c \
 		ft_arraylist_peek.c \
 		ft_arraylist_pop.c \
 		ft_arraylist_replace.c \
+		ft_arraylist_replace2d.c \
 		ft_arraylist_transform.c \
+		ft_arraylist_transform2d.c \
 		ft_arraylist_transform2di.c \
 		ft_arraylist_transform2diarg.c \
 		stringbuilder.c
@@ -105,7 +115,7 @@ OBJS_DIR := ./obj/
 OBJS = $(addprefix $(OBJS_DIR), $(patsubst %.c,%.o,$(FILES)))
 DEP_FLAGS := -MP -MD
 DEP_FILES := $(addsuffix .d,$(OBJS))
-CFLAGS := -fsanitize=address -fsanitize=undefined -g3 -Wall -Wextra -Werror
+CFLAGS := -g3 -Wall -Wextra -Werror
 CC := cc
 
 all: $(NAME)

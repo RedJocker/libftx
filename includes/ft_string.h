@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:03:11 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 09:42:38 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:22:40 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ char	**ft_split(char const *str, char ch);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *str, char (*fun)(unsigned int, char));
 void	ft_striteri(char *str, void (*fun)(unsigned int, char*));
+char	*ft_chomp(char *str);
 
 #endif

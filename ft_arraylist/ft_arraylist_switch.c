@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_arraylist_switch.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 21:19:28 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/11 17:49:46 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/18 18:19:29 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/18 18:24:56 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "ft_arraylist_internal.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 50
-# endif
-
-# ifndef FD_SIZE
-#  define FD_SIZE 100
-# endif
-
-char			*get_next_line(int fd);
-
-#endif
+void	ft_arraylist_switch(t_arraylist alst, void *element, size_t at)
+{
+	if (at >= alst->size)
+		return ;
+	alst->arr[at] = element;
+}

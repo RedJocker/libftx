@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_arraylist_swap2d.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 21:19:28 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/11 17:49:46 by maurodri         ###   ########.fr       */
+/*   Created: 2024/02/18 18:37:40 by maurodri          #+#    #+#             */
+/*   Updated: 2024/02/18 18:43:26 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "collection/ft_arraylist.h"
+#include "ft_arraylist_internal.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 50
-# endif
+void	ft_arraylist_swap2d(t_arraylist alst, size_t at1[2], size_t at2[2])
+{
+	void		*temp;
+	t_arraylist	ilst1;
+	t_arraylist	ilst2;
 
-# ifndef FD_SIZE
-#  define FD_SIZE 100
-# endif
-
-char			*get_next_line(int fd);
-
-#endif
+	ilst1 = alst->arr[at1[0]];
+	ilst2 = alst->arr[at2[0]];
+	temp = ilst1->arr[at1[1]];
+	ilst1->arr[at1[1]] = ilst2->arr[at2[1]];
+	ilst2->arr[at2[1]] = temp;
+}
