@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:01:27 by maurodri          #+#    #+#             */
-/*   Updated: 2023/10/31 20:51:43 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/05/22 01:39:48 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t	trimmed_len(char const *str, char const *set)
 	while (str[len])
 		len++;
 	len--;
-	while (includes(set, str[len]) && len >= 0)
+	while (len >= 0 && includes(set, str[len]))
 		len--;
 	return (++len);
 }
