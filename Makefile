@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/05/10 14:48:12 by maurodri         ###   ########.fr        #
+#    Updated: 2024/06/11 19:56:54 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -95,12 +95,20 @@ FILES = ft_isalpha.c \
 		ft_arraylist_new.c \
 		ft_arraylist_peek.c \
 		ft_arraylist_pop.c \
+		ft_arraylist_popat.c \
 		ft_arraylist_replace.c \
 		ft_arraylist_replace2d.c \
 		ft_arraylist_transform.c \
 		ft_arraylist_transform2d.c \
 		ft_arraylist_transform2di.c \
 		ft_arraylist_transform2diarg.c \
+		ft_arraylist_equal.c \
+		ft_stack_new.c \
+		ft_stack_destroy.c \
+		ft_stack_len.c \
+		ft_stack_add.c \
+		ft_stack_peek.c \
+		ft_stack_pop.c \
 		stringbuilder.c
 
 VPATH = ./ft_printf \
@@ -109,6 +117,7 @@ VPATH = ./ft_printf \
 		./libft \
 		./get_next_line \
 		./ft_arraylist \
+		./ft_stack \
 		./stringbuilder
 
 INCLUDES := -I./includes -I./ft_printf -I./ft_printf/presenter_bonus -I./ft_printf/parser_bonus
