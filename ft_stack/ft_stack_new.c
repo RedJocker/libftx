@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:44:29 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/11 19:09:53 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:32:57 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_stack	ft_stack_new(void (*destroy_element)(void *element))
 {
-	return ft_arraylist_new(destroy_element);
+	return (ft_arraylist_new(destroy_element));
 }
 
 /* #include "ft_util.h" */

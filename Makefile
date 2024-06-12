@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/06/11 19:56:54 by maurodri         ###   ########.fr        #
+#    Updated: 2024/06/12 20:03:36 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -106,7 +106,7 @@ FILES = ft_isalpha.c \
 		ft_stack_new.c \
 		ft_stack_destroy.c \
 		ft_stack_len.c \
-		ft_stack_add.c \
+		ft_stack_push.c \
 		ft_stack_peek.c \
 		ft_stack_pop.c \
 		stringbuilder.c

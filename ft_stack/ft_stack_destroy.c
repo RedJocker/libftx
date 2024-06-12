@@ -6,13 +6,13 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 19:09:08 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/11 19:14:23 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:33:53 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "collection/ft_stack.h"
 
-void ft_stack_destroy(t_stack stack) 
+void	ft_stack_destroy(t_stack stack)
 {
 	ft_arraylist_destroy(stack);
 }

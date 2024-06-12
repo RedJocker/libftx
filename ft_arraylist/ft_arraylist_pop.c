@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:52:38 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/09 05:22:11 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:28:27 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@
  */
 void	*ft_arraylist_pop(t_arraylist alst)
 {
+	void	*ele;
+
 	if (alst->size == 0)
 		return (NULL);
-	return (ft_arraylist_get(alst, alst->size-- - 1));
+	ele = ft_arraylist_get(alst, alst->size - 1);
+	alst->size--;
+	return (ele);
 }
