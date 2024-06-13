@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 19:38:03 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/12 20:29:53 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 22:58:52 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_arraylist_popat(t_arraylist alst, size_t at)
 {
 	size_t	len;
 	void	*elem;
-	size_t	i;
+	int		i;
 
 	len = ft_arraylist_len(alst);
 	if (len == 0)
@@ -41,8 +41,8 @@ void	*ft_arraylist_popat(t_arraylist alst, size_t at)
 		at = 0;
 	elem = ft_arraylist_get(alst, at);
 	i = at - 1;
-	while (++at < len - 2)
-		alst->arr[at] = alst->arr[at + 1];
+	while (++i < ((int) len) - 1)
+		alst->arr[i] = alst->arr[i + 1];
 	alst->size--;
 	return (elem);
 }

@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:45:00 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/12 20:50:03 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 22:35:15 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ size_t		ft_stack_len(t_stack stack);
 void		*ft_stack_peek(t_stack stack);
 t_stack		ft_stack_push(t_stack stack, void *element);
 void		*ft_stack_pop(t_stack stack);
+t_stack		ft_stack_push_back(t_stack stack, void *element);
+void		*ft_stack_pop_back(t_stack stack);
+void		ft_stack_print(t_stack stack, void (*pfun) (void *));
 
 #endif

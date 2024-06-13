@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/06/12 20:03:36 by maurodri         ###   ########.fr        #
+#    Updated: 2024/06/12 21:59:49 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -109,6 +109,9 @@ FILES = ft_isalpha.c \
 		ft_stack_push.c \
 		ft_stack_peek.c \
 		ft_stack_pop.c \
+		ft_stack_push_back.c \
+		ft_stack_pop_back.c \
+		ft_stack_print.c \
 		stringbuilder.c
 
 VPATH = ./ft_printf \
