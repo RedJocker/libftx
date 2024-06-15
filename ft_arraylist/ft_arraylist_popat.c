@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 19:38:03 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/12 22:58:52 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:45:50 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 	that was removed.
 	If 'at' is greater than last element index then
  	last element is poped.
-	If 'at' is less than zero then first element is
-	poped.
 	If list is empty returns null.
 	Element that is returned becomes owned by caller, 
 	which will become responsible for freeing the element.
@@ -37,8 +35,6 @@ void	*ft_arraylist_popat(t_arraylist alst, size_t at)
 		return (NULL);
 	if (at > len - 1)
 		at = len - 1;
-	else if (at < 0)
-		at = 0;
 	elem = ft_arraylist_get(alst, at);
 	i = at - 1;
 	while (++i < ((int) len) - 1)
