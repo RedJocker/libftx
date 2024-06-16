@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_int_util.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:11:06 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/15 22:41:52 by maurodri         ###   ########.fr       */
+/*   Created: 2024/06/15 23:52:15 by maurodri          #+#    #+#             */
+/*   Updated: 2024/06/15 23:52:55 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdio.h"
-#include "ft_string.h"
 
-void	ft_putendl_fd(char *str, int fd)
+int		ft_int_equal(int *a, int *b)
 {
-	size_t	len;
-
-	if (!str)
-		return ;
-	len = ft_strlen(str);
-	write(fd, str, len);
-	write(fd, "\n", 1);
+	return (*a == *b);
 }
 
-void	ft_putendl(char *str)
+void	ft_int_print(int *i)
 {
-	ft_putendl_fd(str, 1);
-}
-
-void	ft_puterrl(char *str)
-{
-	ft_putendl_fd(str, 2);
+	ft_putnbr_fd(*i, 1);
 }
