@@ -6,14 +6,15 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 21:25:07 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/12 23:01:41 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/19 21:06:24 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "collection/ft_stack.h"
 
-t_stack	ft_stack_push_back(t_stack stack, void *element){
-    return (ft_arraylist_addat(stack, element, 0));
+t_stack	ft_stack_push_back(t_stack stack, void *element)
+{
+	return (ft_arraylist_addat(stack, element, 0));
 }
 
 /* #include "ft_util.h" */

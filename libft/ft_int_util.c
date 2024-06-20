@@ -6,13 +6,13 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:52:15 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/15 23:52:55 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/19 21:04:30 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdio.h"
 
-int		ft_int_equal(int *a, int *b)
+int	ft_int_equal(int *a, int *b)
 {
 	return (*a == *b);
 }
