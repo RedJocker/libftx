@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 22:55:52 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/20 02:38:04 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/20 02:44:53 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ft_hashset_internal.h"
 #include "ft_memlib.h"
 
-static int hash_add(void **arr, size_t capacity, void *ele, t_hashset hset)
+static int	hash_add(void **arr, size_t capacity, void *ele, t_hashset hset)
 {
 	size_t	hash_i;
 
@@ -33,7 +33,7 @@ static void	hash_realloc(t_hashset hset)
 {
 	void	**temp;
 	size_t	i;
-	void 	*current;
+	void	*current;
 
 	temp = ft_calloc(2 * hset->capacity, sizeof(void *));
 	if (!temp)
@@ -78,7 +78,7 @@ t_hashset	ft_hashset_add(t_hashset hset, void *element)
 		return (NULL);
 	}
 	was_add = (
-		hash_add(hset->arr, hset->capacity, element, hset));
+			hash_add(hset->arr, hset->capacity, element, hset));
 	if (was_add)
 		hset->size++;
 	return (hset);

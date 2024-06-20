@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 23:59:06 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/20 00:22:03 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/20 02:43:59 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@
 	destroying t_hashset
  */
 t_hashset	ft_hashset_new(
-	size_t	(*hash_fun)(void *element),
-	int		(*elem_equal)(void *ele1, void *ele2),
-	void	(*destroy_element)(void *element))
+	size_t (*hash_fun)(void *element),
+	int (*elem_equal)(void *ele1, void *ele2),
+	void (*destroy_element)(void *element))
 {
 	t_hashset	new_hashset;
 
@@ -38,7 +38,7 @@ t_hashset	ft_hashset_new(
 	if (!new_hashset)
 		return (NULL);
 	new_hashset->arr = (
-		ft_calloc(DEFAULT_HASHSET_SIZE,  sizeof(void *)));
+			ft_calloc(DEFAULT_HASHSET_SIZE, sizeof(void *)));
 	if (!new_hashset->arr)
 		return (ft_free_retnull(new_hashset));
 	new_hashset->capacity = DEFAULT_HASHSET_SIZE;

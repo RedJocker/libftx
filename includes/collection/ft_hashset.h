@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 23:06:17 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/20 02:22:40 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/20 02:42:23 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 typedef struct s_hashset	*t_hashset;
 
 t_hashset	ft_hashset_new(
-	size_t	(*hash_fun)(void *element),
-	int		(*elem_equal)(void *ele1, void *ele2),
-	void	(*destroy_element)(void *element));
+				size_t (*hash_fun)(void *element),
+				int (*elem_equal)(void *ele1, void *ele2),
+				void (*destroy_element)(void *element));
 void		ft_hashset_destroy(t_hashset alst);
 void		ft_hashset_debug(t_hashset hset, t_consumer printfun);
 size_t		ft_hashset_len(t_hashset alst);
