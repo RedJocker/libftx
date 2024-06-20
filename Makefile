@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/06/15 23:53:52 by maurodri         ###   ########.fr        #
+#    Updated: 2024/06/20 02:15:36 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -113,6 +113,12 @@ FILES = ft_isalpha.c \
 		ft_stack_push_back.c \
 		ft_stack_pop_back.c \
 		ft_stack_print.c \
+		ft_hashset_add.c \
+		ft_hashset_destroy.c \
+		ft_hashset_foreach.c \
+		ft_hashset_len.c \
+		ft_hashset_new.c \
+		ft_hashset_debug.c \
 		stringbuilder.c
 
 VPATH = ./ft_printf \
@@ -122,7 +128,8 @@ VPATH = ./ft_printf \
 		./get_next_line \
 		./ft_arraylist \
 		./ft_stack \
-		./stringbuilder
+		./ft_hashset \
+		./stringbuilder 
 
 INCLUDES := -I./includes -I./ft_printf -I./ft_printf/presenter_bonus -I./ft_printf/parser_bonus
 OBJS_DIR := ./obj/

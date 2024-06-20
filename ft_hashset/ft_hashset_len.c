@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_util.c                                      :+:      :+:    :+:   */
+/*   ft_hashset_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
+/*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/15 23:52:15 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/20 02:17:42 by maurodri         ###   ########.fr       */
+/*   Created: 2024/06/19 23:58:29 by maurodri          #+#    #+#             */
+/*   Updated: 2024/06/19 23:58:55 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdio.h"
+#include "ft_hashset_internal.h"
 
-int	ft_int_equal(int *a, int *b)
+/*
+  Returns the current size of hset
+*/
+size_t	ft_hashset_len(t_hashset hset)
 {
-	return (a && b && *a == *b);
-}
-
-void	ft_int_print(int *i)
-{
-	if (i == NULL)
-		ft_putstr("(nil)");
-	else
-		ft_putnbr_fd(*i, 1);
+	return (hset->size);
 }
