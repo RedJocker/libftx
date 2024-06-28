@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:36:47 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/19 21:08:50 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/06/27 23:10:59 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void	ft_nop0(void);
 void	ft_nop(void *a, ...);
 int		ft_int_equal(int *a, int *b);
 void	ft_int_print(int *i);
+void	ft_int_printerr(int *i);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/06/26 20:42:59 by maurodri         ###   ########.fr        #
+#    Updated: 2024/06/27 21:25:26 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -109,6 +109,8 @@ FILES = ft_isalpha.c \
 		ft_stack_len.c \
 		ft_stack_push.c \
 		ft_stack_peek.c \
+		ft_stack_peek_next.c \
+		ft_stack_peek_last.c \
 		ft_stack_pop.c \
 		ft_stack_push_back.c \
 		ft_stack_pop_back.c \
