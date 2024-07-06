@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:36:47 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/27 23:10:59 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/07/06 02:51:53 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ typedef int		(*t_intfun)(void *);
 typedef int		(*t_intbifun)(void *, void *);
 typedef void	(*t_consumer)(void *);
 typedef void	(*t_biconsumer)(void *, void *);
+typedef void	(*t_triconsumer)(void *, void *, void *);
 
 void	ft_nop0(void);
 void	ft_nop(void *a, ...);

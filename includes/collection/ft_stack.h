@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:45:00 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/27 23:07:21 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/07/06 03:00:01 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ void		ft_stack_print(t_stack stack, void (*pfun) (void *));
 void		ft_stack_printerr(t_stack stack, void (*pfun) (void *));
 void		ft_stack_foreach(t_stack stk, t_consumer fun);
 void		ft_stack_foreacharg(t_stack stk, t_biconsumer fun, void *arg);
+void		ft_stack_foreachbiarg(
+				t_stack stk, t_triconsumer fun, void *arg1, void *arg2);
 
 #endif
