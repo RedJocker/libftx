@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:52:15 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/27 23:11:01 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/07/06 17:21:47 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 int	ft_int_equal(int *a, int *b)
 {
 	return (a && b && *a == *b);
+}
+
+int	ft_int_lt(int *a, int *b)
+{
+	return (a && b && *a < *b);
 }
 
 void	ft_int_print(int *i)
