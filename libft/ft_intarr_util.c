@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 01:16:46 by maurodri          #+#    #+#             */
-/*   Updated: 2024/07/11 01:27:08 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/07/11 19:03:47 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_intarr_printfd(int **arr, int len, int fd)
 	int	i;
 
 	if (len <= 0)
-		return (ft_putstr_fd("{};", fd));	
+		return (ft_putstr_fd("{};", fd));
 	i = -1;
 	ft_putstr_fd("{ ", fd);
 	while (++i < len)
@@ -29,12 +29,20 @@ void	ft_intarr_printfd(int **arr, int len, int fd)
 	ft_putendl_fd("};", fd);
 }
 
+static void	swap(int **a, int **b)
+{
+	int	*temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
 void	ft_intarr_sort(int **arr, int len)
 {
 	int	pivot_i;
-	int last_i;
-	int next_i;
-	int *temp;
+	int	last_i;
+	int	next_i;
 
 	if (len <= 1)
 		return ;
@@ -44,19 +52,9 @@ void	ft_intarr_sort(int **arr, int len)
 	{
 		next_i = pivot_i + 1;
 		if (*arr[pivot_i] >= *arr[next_i])
-		{
-			temp = arr[pivot_i];
-			arr[pivot_i] = arr[next_i];
-			arr[next_i] = temp;
-			pivot_i++;
-		}
+			swap(arr + pivot_i++, arr + next_i);
 		else
-		{
-			temp = arr[next_i];
-			arr[next_i] = arr[last_i];
-			arr[last_i] = temp;
-			last_i--;
-		}
+			swap(arr + last_i--, arr + next_i);
 	}
 	last_i = (len - 1);
 	if (pivot_i > 0)
@@ -68,8 +66,12 @@ void	ft_intarr_sort(int **arr, int len)
 /* int main(void) */
 /* { */
 /* 	int a[10] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }; */
-/* 	int *arr[10] = { a + 0, a + 1, a + 2, a + 3, a + 4, a + 5, a + 6, a + 7, a + 8, a + 9 }; */
-	
+/* 	int *arr[10] = */
+/* 		{ a + 0, */
+/* 		  a + 1, */
+/* 		  a + 2, */
+/* 		  a + 3, */
+/* 		  a + 4, a + 5, a + 6, a + 7, a + 8, a + 9 }; */
 /* 	ft_intarr_printfd(arr, 10, 1); */
 /* 	ft_intarr_sort(arr, 10); */
 /* 	ft_intarr_printfd(arr, 10, 1); */
