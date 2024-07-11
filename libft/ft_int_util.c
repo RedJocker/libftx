@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:52:15 by maurodri          #+#    #+#             */
-/*   Updated: 2024/07/06 17:21:47 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/07/11 01:28:06 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,12 @@ void	ft_int_printerr(int *i)
 		ft_puterr("(nil)");
 	else
 		ft_putnbr_fd(*i, 2);
+}
+
+void	ft_int_printfd(int *i, int fd)
+{
+	if (i == NULL)
+		ft_putstr("(nil)");
+	else
+		ft_putnbr_fd(*i, fd);
 }
