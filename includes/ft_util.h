@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:36:47 by maurodri          #+#    #+#             */
-/*   Updated: 2024/07/11 01:28:04 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/21 17:45:13 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ void	ft_int_printfd(int *i, int fd);
 int		ft_int_lt(int *maybe_lower, int *maybe_greater);
 void	ft_intarr_printfd(int **arr, int len, int fd);
 void	ft_intarr_sort(int **arr, int len);
+void	ft_strarr_free(char **arr);
+void	ft_strarr_printfd(char **arr, int fd);
 
 #endif

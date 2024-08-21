@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/07/11 01:18:02 by maurodri         ###   ########.fr        #
+#    Updated: 2024/08/21 17:43:22 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -49,6 +49,7 @@ FILES = ft_isalpha.c \
 		ft_nop.c \
 		ft_int_util.c \
 		ft_intarr_util.c \
+		ft_strarr_util.c \
 		ft_strmapi.c \
 		ft_striteri.c \
 		ft_putchar_fd.c \
