@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:02:50 by maurodri          #+#    #+#             */
-/*   Updated: 2023/12/13 18:46:38 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:26:32 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 #include "presenter_bonus.h"
 #include <stdlib.h>
 
-int	present_char(t_format *format, va_list *lst)
+int	present_char(t_format *format, va_list *lst, t_stringbuilder *builder)
 {
 	char	ch;
 	char	*str;
 	size_t	size;
+	int		i;
 
 	size = (format->width > 0) * format->width + (format->width <= 0) * 1;
 	str = malloc(size * sizeof(char));
@@ -31,7 +32,13 @@ int	present_char(t_format *format, va_list *lst)
 		str[0] = ch;
 	else
 		str[size - 1] = ch;
-	write(1, str, size);
+	if (size > 0)
+	{
+		write(1, str, size);
+		i = -1;
+		while (++i < size)
+			*builder = stringbuilder_addchar(*builder, str[i]);
+	}
 	free(str);
 	return (size);
 }

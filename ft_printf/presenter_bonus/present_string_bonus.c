@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:03:53 by maurodri          #+#    #+#             */
-/*   Updated: 2024/01/04 19:58:18 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:17:36 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,11 +83,12 @@ static int	present_string_fmt(
 	return (outstr_len);
 }
 
-int	present_string(t_format *format, va_list *lst)
+int	present_string(t_format *format, va_list *lst, t_stringbuilder *builder)
 {
 	char	*str;
 	char	*out_str;
 	int		out_str_len;
+	int		i;
 
 	out_str_len = 0;
 	str = va_arg (*lst, char *);
@@ -95,7 +96,12 @@ int	present_string(t_format *format, va_list *lst)
 	if (!out_str)
 		return (-1);
 	if (out_str_len > 0)
+	{
 		write(1, out_str, out_str_len);
+		i = -1;
+		while (++i < out_str_len)
+			*builder = stringbuilder_addchar(*builder, out_str[i]);
+	}
 	free(out_str);
 	return (out_str_len);
 }

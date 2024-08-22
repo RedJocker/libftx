@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:03:52 by maurodri          #+#    #+#             */
-/*   Updated: 2024/01/08 19:19:14 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:32:23 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,12 @@ static int	present_pointer_num(
 	return (outstr_len);
 }
 
-int	present_pointer(t_format *fmt, va_list *lst)
+int	present_pointer(t_format *fmt, va_list *lst, t_stringbuilder *builder)
 {
 	unsigned long long	num;
 	char				*out_str;
 	int					out_str_len;
+	int					i;
 
 	out_str_len = 0;
 	num = (unsigned long long) va_arg(*lst, void *);
@@ -93,7 +94,13 @@ int	present_pointer(t_format *fmt, va_list *lst)
 		out_str_len = present_pointer_num(num, fmt, &out_str);
 	if (!out_str)
 		return (-1);
-	write(1, out_str, out_str_len);
+	if (out_str_len > 0)
+	{
+		write(1, out_str, out_str_len);
+		i = -1;
+		while (++i < out_str_len)
+			*builder = stringbuilder_addchar(*builder, out_str[i]);
+	}
 	free(out_str);
 	return (out_str_len);
 }

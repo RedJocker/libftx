@@ -2,3 +2,15 @@
 ./
 -I
 ./includes
+-I
+./includes/collection
+-I
+./ft_hashset
+-I
+./ft_printf
+-I
+./ft_printf/presenter_bonus
+-I
+./ft_printf/parser_bonus
+-I
+./get_next_line

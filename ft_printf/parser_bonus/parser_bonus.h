@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:10:15 by maurodri          #+#    #+#             */
-/*   Updated: 2024/01/11 21:03:31 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:07:30 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include "ft_printf_internals_bonus.h"
 
 // parser.c
-int	parse_format(char **str_ptr, va_list *lst);
-int	parse_non_format(char **str_ptr);
+int	parse_format(char **str_ptr, va_list *lst, t_stringbuilder *strbuilder);
+int	parse_non_format(char **str_ptr, t_stringbuilder *strbuilder);
 
 // parse_format_args.c
 int	parse_initial(t_format *format, char **str_ptr);

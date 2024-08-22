@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:49:41 by maurodri          #+#    #+#             */
-/*   Updated: 2024/01/09 20:37:53 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:30:25 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,18 +70,26 @@ static int	present_hexa_num(
 	return (outlen);
 }
 
-int	present_hexa(t_format *fmt, va_list *lst, char *base)
+int	present_hexa(
+	t_format *fmt, va_list *lst, char *base, t_stringbuilder *builder)
 {
 	unsigned int	num;
 	char			*out_str;
 	int				out_str_len;
+	int				i;
 
 	out_str_len = 0;
 	num = (unsigned int) va_arg(*lst, unsigned int);
 	out_str_len = present_hexa_num(num, fmt, &out_str, base);
 	if (!out_str)
 		return (-1);
-	write(1, out_str, out_str_len);
+	if (out_str_len > 0)
+	{
+		write(1, out_str, out_str_len);
+		i = -1;
+		while (++i < out_str_len)
+			*builder = stringbuilder_addchar(*builder, out_str[i]);
+	}
 	free(out_str);
 	return (out_str_len);
 }
