@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:49:41 by maurodri          #+#    #+#             */
-/*   Updated: 2024/08/22 17:30:25 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 20:06:44 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ int	present_hexa(
 		return (-1);
 	if (out_str_len > 0)
 	{
-		write(1, out_str, out_str_len);
 		i = -1;
 		while (++i < out_str_len)
 			*builder = stringbuilder_addchar(*builder, out_str[i]);

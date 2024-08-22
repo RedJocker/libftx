@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:02:50 by maurodri          #+#    #+#             */
-/*   Updated: 2024/08/22 17:26:32 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 20:05:58 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	present_char(t_format *format, va_list *lst, t_stringbuilder *builder)
 	char	ch;
 	char	*str;
 	size_t	size;
-	int		i;
+	size_t	i;
 
 	size = (format->width > 0) * format->width + (format->width <= 0) * 1;
 	str = malloc(size * sizeof(char));
@@ -34,7 +34,6 @@ int	present_char(t_format *format, va_list *lst, t_stringbuilder *builder)
 		str[size - 1] = ch;
 	if (size > 0)
 	{
-		write(1, str, size);
 		i = -1;
 		while (++i < size)
 			*builder = stringbuilder_addchar(*builder, str[i]);

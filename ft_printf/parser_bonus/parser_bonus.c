@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:10:03 by maurodri          #+#    #+#             */
-/*   Updated: 2024/08/22 17:37:53 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 20:05:22 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@
 
 int	parse_non_format(char **str_ptr, t_stringbuilder *strbuilder)
 {
-	int size;
-	int i;
+	int	size;
+	int	i;
 
 	size = find_ch_or_end_index(*str_ptr, '%');
 	i = -1;
 	while (++i < size)
 		*strbuilder = stringbuilder_addchar(*strbuilder, *str_ptr[i]);
-	write(1, *str_ptr, size);
 	*str_ptr = *str_ptr + size;
 	return (size);
 }

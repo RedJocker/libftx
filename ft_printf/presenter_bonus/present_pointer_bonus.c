@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:03:52 by maurodri          #+#    #+#             */
-/*   Updated: 2024/08/22 17:32:23 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/08/22 20:06:19 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ int	present_pointer(t_format *fmt, va_list *lst, t_stringbuilder *builder)
 		return (-1);
 	if (out_str_len > 0)
 	{
-		write(1, out_str, out_str_len);
 		i = -1;
 		while (++i < out_str_len)
 			*builder = stringbuilder_addchar(*builder, out_str[i]);
