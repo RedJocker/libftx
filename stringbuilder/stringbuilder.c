@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 20:32:22 by maurodri          #+#    #+#             */
-/*   Updated: 2024/02/06 20:51:57 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/09/03 18:58:38 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ t_stringbuilder	stringbuilder_addchar(t_stringbuilder builder, char ch)
 	char	*temp;
 	size_t	i;
 
+	if (!builder)
+		return (NULL);
 	if (builder->capacity == builder->size)
 	{
 		temp = malloc(builder->capacity * 2 * sizeof(char));
@@ -54,8 +56,7 @@ t_stringbuilder	stringbuilder_addchar(t_stringbuilder builder, char ch)
 		builder->str = temp;
 		builder->capacity *= 2;
 	}
-	builder->str[builder->size] = ch;
-	builder->size++;
+	builder->str[builder->size++] = ch;
 	return (builder);
 }
 
@@ -64,6 +65,8 @@ char	*stringbuilder_build(t_stringbuilder builder)
 	char	*str;
 	size_t	i;
 
+	if (!builder)
+		return (NULL);
 	str = malloc((builder->size + 1) * sizeof(char));
 	if (!str)
 	{
