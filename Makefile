@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/08/21 17:43:22 by maurodri         ###   ########.fr        #
+#    Updated: 2024/09/04 01:34:17 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -82,6 +82,7 @@ FILES = ft_isalpha.c \
 		present_hexa_bonus.c \
 		present_pointer_bonus.c \
 		get_next_line.c \
+		ft_assert.c \
 		ft_arraylist_add.c \
 		ft_arraylist_addat.c \
 		ft_arraylist_destroy.c \
@@ -125,7 +126,8 @@ FILES = ft_isalpha.c \
 		ft_hashset_len.c \
 		ft_hashset_new.c \
 		ft_hashset_debug.c \
-		stringbuilder.c
+		stringbuilder.c \
+		stringbuilder_add.c
 
 VPATH = ./ft_printf \
 		./ft_printf/parser_bonus/ \

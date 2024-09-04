@@ -6,13 +6,14 @@
 /*   By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:10:50 by maurodri          #+#    #+#             */
-/*   Updated: 2024/09/03 19:44:33 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/09/04 01:17:34 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_memlib.h"
 #include "parser_bonus.h"
 #include "stringbuilder.h"
+#include <stdarg.h>
 #include <stdlib.h>
 
 static void	init(int *len, int *ret, t_stringbuilder *strbuilder)
@@ -22,7 +23,7 @@ static void	init(int *len, int *ret, t_stringbuilder *strbuilder)
 	*strbuilder = stringbuilder_new();
 }
 
-int	ft_vasprintf(char **outstr, const char *str, va_list args)
+int	ft_vasprintf(char **outstr, const char *str, va_list *args)
 {
 	int				len_ret[2];
 	t_stringbuilder	strbuilder;
@@ -37,7 +38,7 @@ int	ft_vasprintf(char **outstr, const char *str, va_list args)
 		len_ret[0] += parse_non_format(str_p, &strbuilder);
 		if (!*str)
 			break ;
-		len_ret[1] = parse_format(str_p, &args, &strbuilder);
+		len_ret[1] = parse_format(str_p, args, &strbuilder);
 		if (len_ret[1] < 0 || !strbuilder)
 		{
 			stringbuilder_destroy(strbuilder);
@@ -58,7 +59,7 @@ int	ft_asprintf(char **outstr, const char *str, ...)
 
 	va_start(args, str);
 	*outstr = 0;
-	len = ft_vasprintf(outstr, str, args);
+	len = ft_vasprintf(outstr, str, &args);
 	va_end(args);
 	return (len);
 }
@@ -71,7 +72,7 @@ int	ft_printf(const char *str, ...)
 
 	va_start(args, str);
 	outstr = 0;
-	len = ft_vasprintf(&outstr, str, args);
+	len = ft_vasprintf(&outstr, str, &args);
 	if (len > 0 && outstr)
 		write(1, outstr, len);
 	if (outstr)

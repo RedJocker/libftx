@@ -6,12 +6,14 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:36:47 by maurodri          #+#    #+#             */
-/*   Updated: 2024/08/21 17:45:13 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/09/04 01:43:28 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_UTIL_H
 # define FT_UTIL_H
+
+# include "collection/ft_arraylist.h"
 
 typedef void	*(*t_fun)(void *);
 typedef void	*(*t_bifun)(void *, void *);
@@ -32,5 +34,7 @@ void	ft_intarr_printfd(int **arr, int len, int fd);
 void	ft_intarr_sort(int **arr, int len);
 void	ft_strarr_free(char **arr);
 void	ft_strarr_printfd(char **arr, int fd);
+char	**ft_strarr_cat(char **strarr0, char **strarr1);
+char	**ft_lststr_to_arrstr(t_arraylist lststr);
 
 #endif
