@@ -6,12 +6,11 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 17:12:54 by maurodri          #+#    #+#             */
-/*   Updated: 2024/09/09 03:01:42 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/09/09 20:17:13 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdio.h"
-#include <stdlib.h>
 #include "ft_memlib.h"
 #include "ft_util.h"
 #include "ft_string.h"
@@ -57,8 +56,7 @@ char	**ft_strarr_cat(char **strarr0, char **strarr1)
 
 	if (!strarr0 && !strarr1)
 		return (NULL);
-	len0_len1[0] = 0;
-	len0_len1[1] = 0;
+	ft_bzero(len0_len1, sizeof(int [2]));
 	while (strarr0 && strarr0[len0_len1[0]])
 		len0_len1[0]++;
 	while (strarr1 && strarr1[len0_len1[1]])
@@ -70,10 +68,10 @@ char	**ft_strarr_cat(char **strarr0, char **strarr1)
 	i_j[0] = -1;
 	i_j[1] = 0;
 	while (++i_j[0] < len0_len1[0])
-		ret_strarr[i_j[1]++] = strarr0[i_j[0]];
+		ret_strarr[i_j[1]++] = ft_strdup(strarr0[i_j[0]]);
 	i_j[0] = -1;
 	while (++i_j[0] < len0_len1[1])
-		ret_strarr[i_j[1]++] = strarr1[i_j[0]];
+		ret_strarr[i_j[1]++] = ft_strdup(strarr1[i_j[0]]);
 	return (ret_strarr);
 }
 
@@ -92,3 +90,28 @@ char	**ft_lststr_to_arrstr(t_arraylist lststr)
 		arrstr[i] = ft_strdup((char *) ft_arraylist_get(lststr, i));
 	return (arrstr);
 }
+
+/*
+int main(void)
+{
+	char *str1 = "hello";
+	char *str2 = "there";
+	char *str3 = "mate";
+	char *arr[] = { str1, str2, str3, 0 };
+	ft_strarr_printfd(arr, 1);
+	ft_strarr_printfd(0, 1);
+	char **arr_aloc = malloc(4 * sizeof(char *));
+	int i = -1;
+	while (++i < 4)
+	{
+		arr_aloc[i] = ft_strdup(arr[i]);
+	}
+	ft_strarr_printfd(arr_aloc, 1);
+	char **cat = ft_strarr_cat(arr, arr_aloc);
+	ft_putendl("----");
+	ft_strarr_printfd(cat, 1);
+	ft_strarr_free(arr_aloc);
+	ft_strarr_free(cat);
+	return (0);
+}
+*/
