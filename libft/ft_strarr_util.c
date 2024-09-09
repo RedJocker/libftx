@@ -6,7 +6,7 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 17:12:54 by maurodri          #+#    #+#             */
-/*   Updated: 2024/09/04 01:47:38 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/09/09 03:01:42 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ char	**ft_strarr_cat(char **strarr0, char **strarr1)
 	len0_len1[1] = 0;
 	while (strarr0 && strarr0[len0_len1[0]])
 		len0_len1[0]++;
-	len0_len1[1] = 0;
 	while (strarr1 && strarr1[len0_len1[1]])
 		len0_len1[1]++;
 	len_ret = len0_len1[0] + len0_len1[1];
@@ -93,25 +92,3 @@ char	**ft_lststr_to_arrstr(t_arraylist lststr)
 		arrstr[i] = ft_strdup((char *) ft_arraylist_get(lststr, i));
 	return (arrstr);
 }
-
-/*
-#include "ft_string.h"
-int main(void)
-{
-	char *str1 = "hello";
-	char *str2 = "there";
-	char *str3 = "mate";
-	char *arr[] = { str1, str2, str3, 0 };
-	ft_strarr_printfd(arr, 1);
-	ft_strarr_printfd(0, 1);
-	char **arr_aloc = malloc(4 * sizeof(char *));
-	int i = -1;
-	while (++i < 4)
-	{
-		arr_aloc[i] = ft_strdup(arr[i]);
-	}
-	ft_strarr_printfd(arr_aloc, 1);
-	ft_strarr_free(arr_aloc);
-	return (0);
-}
-*/
