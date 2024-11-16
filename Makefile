@@ -6,7 +6,7 @@
 #    By: maurodri <maurodri@student.42sp...>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 22:04:40 by maurodri          #+#    #+#              #
-#    Updated: 2024/09/04 01:34:17 by maurodri         ###   ########.fr        #
+#    Updated: 2024/11/16 02:33:23 by maurodri         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -40,11 +40,13 @@ FILES = ft_isalpha.c \
 		ft_calloc.c \
 		ft_strdup.c \
 		ft_substr.c \
+		ft_strtoll.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_chomp.c \
 		ft_split.c \
 		ft_split_quote.c \
+		ft_splitfun.c \
 		ft_itoa.c \
 		ft_nop.c \
 		ft_int_util.c \
@@ -102,6 +104,7 @@ FILES = ft_isalpha.c \
 		ft_arraylist_popat.c \
 		ft_arraylist_replace.c \
 		ft_arraylist_replace2d.c \
+		ft_arraylist_sort.c \
 		ft_arraylist_transform.c \
 		ft_arraylist_transform2d.c \
 		ft_arraylist_transform2di.c \

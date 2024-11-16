@@ -6,13 +6,14 @@
 /*   By: maurodri <maurodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:52:00 by maurodri          #+#    #+#             */
-/*   Updated: 2024/06/12 20:31:08 by maurodri         ###   ########.fr       */
+/*   Updated: 2024/11/16 02:25:19 by maurodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ARRAYLIST_H
 # define FT_ARRAYLIST_H
 # include <stdlib.h>
+# include "ft_util.h"
 
 typedef struct s_arraylist	*t_arraylist;
 
@@ -33,6 +34,7 @@ void		ft_arraylist_swap2d(t_arraylist alst, size_t at1[2], size_t at2[2]);
 void		*ft_arraylist_pop(t_arraylist alst);
 void		*ft_arraylist_popat(t_arraylist alst, size_t at);
 void		*ft_arraylist_peek(t_arraylist alst);
+void		ft_arraylist_sort(t_arraylist lst, t_intbifun compare_fun);
 void		ft_arraylist_foreach(t_arraylist alst, void (*fun) (void *));
 void		ft_arraylist_foreacharg(
 				t_arraylist alst, void (*fun) (void *, void *), void *arg);
@@ -60,4 +62,6 @@ int			ft_arraylist_equal(
 				t_arraylist arr1,
 				t_arraylist arr2,
 				int (*comp_fun) (void *, void *));
+char		**ft_lststr_to_arrstr(t_arraylist lststr);
+
 #endif
